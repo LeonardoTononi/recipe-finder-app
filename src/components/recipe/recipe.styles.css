@@ -1,0 +1,41 @@
+.recipe {
+  background: white;
+  border-radius: 60px;
+  padding: 20px 0;
+  margin: 20px;
+  width: 400px;
+  box-shadow: 8px 5px 5px 2px #9e9c9c26;
+  letter-spacing: 1px;
+}
+
+.recipe_title {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #565656;
+}
+
+.image_div {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  margin: -33% 0;
+}
+
+.calories {
+  text-align: center;
+}
+
+.ingredients {
+  list-style-type: none;
+  padding: 10px 20px;
+}
+
+.ingredient {
+  padding: 5px 0;
+  line-height: 1.4rem;
+}

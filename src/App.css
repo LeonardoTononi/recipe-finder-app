@@ -1,33 +1,70 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  background: white;
+}
+
+.header {
+  text-align: center;
+  padding: 20px 40px 60px 40px;
+}
+
+.title {
+  color: #f9748f;
+  font-weight: 200;
+  font-size: 3rem;
+}
+
+.search-form {
+  min-height: 5vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  padding-left: 40px;
+}
+
+.search-bar {
+  max-width: 300px;
+  width: 50%;
+  border: none;
+  padding: 10px;
+  box-shadow: 0 0 5px 0 #00000040;
+  border-radius: 20px;
+}
+
+.search-button {
+  background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+  border: 1px solid #fe9a8b;
+  padding: 10px 20px;
   color: white;
+  box-shadow: 0 0 5px 0 #00000040;
+  border-radius: 20px;
+  position: relative;
+  right: 78px;
+  top: -1px;
 }
 
-.App-link {
-  color: #61dafb;
+.search-bar:focus,
+.search-bar:hover {
+  box-shadow: 0 0 5px 2px #00000040;
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-button:focus {
+  outline: none;
+}
+
+.recipes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
