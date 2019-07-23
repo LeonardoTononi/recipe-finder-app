@@ -10,7 +10,9 @@ const Recipe = ({ title, calories, image, ingredients }) => (
     <p className="calories">Calories: {parseInt(calories)} Kcal</p>
     <ul className="ingredients">
       {ingredients.map(ingredient => (
-        <li className="ingredient">• {ingredient.text}</li>
+        <li className="ingredient">
+          <i class="fas fa-caret-right" /> {ingredient.text}
+        </li>
       ))}
     </ul>
   </div>

@@ -1,5 +1,4 @@
 .recipe {
-  background: white;
   border-radius: 60px;
   padding: 20px 0;
   margin: 20px;
@@ -38,4 +37,8 @@
 .ingredient {
   padding: 5px 0;
   line-height: 1.4rem;
+}
+
+.ingredient i {
+  color: #fb466a;
 }
