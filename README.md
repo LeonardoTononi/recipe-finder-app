@@ -2,5 +2,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## More informations
 
-Inspired by Dev Ed on YouTube. 
+Inspired by Dev Ed on YouTube. <br>
 I've added a new style and a new kind of filter. 
