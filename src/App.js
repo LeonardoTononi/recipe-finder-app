@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Recipe from './components/recipe/recipe.component';
+import { Recipe } from './components/recipe/recipe.component';
 import './App.css';
 
 const App = () => {
@@ -47,9 +47,9 @@ const App = () => {
         </form>
       </header>
       <div className="recipes">
-        {recipes.map(recipe => (
+        {recipes.map((recipe, index) => (
           <Recipe
-            key={recipe.recipe.label}
+            key={index}
             title={recipe.recipe.label}
             calories={recipe.recipe.calories}
             image={recipe.recipe.image}
