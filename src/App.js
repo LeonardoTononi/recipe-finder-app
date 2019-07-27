@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Recipe } from './components/recipe/recipe.component';
+import { SearchBox } from './components/search-box/search-box.component';
 import './App.css';
 
 const App = () => {
@@ -8,7 +9,7 @@ const App = () => {
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState('');
-  const [query, setQuery] = useState('chicken');
+  const [query, setQuery] = useState('');
 
   useEffect(() => {
     const getRecipes = async () => {
@@ -35,15 +36,7 @@ const App = () => {
       <header className="header">
         <h1 className="title">Strange Recipes Finder</h1>
         <form onSubmit={getSearch} className="search-form">
-          <input
-            type="text"
-            className="search-bar"
-            value={search}
-            onChange={updateSearch}
-          />
-          <button type="submit" className="search-button">
-            Search
-          </button>
+          <SearchBox updateSearch={updateSearch} placeholder="Search recipe" />
         </form>
       </header>
       <div className="recipes">
