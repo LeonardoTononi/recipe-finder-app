@@ -8,10 +8,23 @@
   border: 1px solid #80808024;
 }
 
+.recipe:hover,
+.recipe:active {
+  transform: scale(1.02);
+  transition: transform 200ms ease-in-out;
+}
+
 .recipe_title {
   text-align: center;
   font-size: 1.6rem;
   color: #565656;
+}
+
+.recipe h2 {
+  margin: 0;
+  padding: 10px 20px 0px 20px;
+  color: #565656;
+  font-size: 1.3rem;
 }
 
 .image_div {

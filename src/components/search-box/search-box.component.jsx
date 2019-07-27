@@ -11,7 +11,7 @@ export const SearchBox = ({ search, updateSearch, placeholder }) => (
       placeholder={placeholder}
     />
     <button type="submit" className="search-button">
-      <i class="fas fa-search" />
+      <i className="fas fa-search" />
     </button>
   </div>
 );

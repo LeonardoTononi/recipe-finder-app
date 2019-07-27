@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Recipe } from './components/recipe/recipe.component';
 import { SearchBox } from './components/search-box/search-box.component';
+/* import { SearchFilter } from './components/search-filter/search-filter.component'; */
 import './App.css';
 
 const App = () => {
@@ -31,6 +32,16 @@ const App = () => {
     setQuery(search);
   };
 
+  const activateSearchFilter = e => {
+    e.target.classList.toggle('active-filter');
+    const li = e.target;
+    if (li.classList.contains('active-filter')) {
+      setQuery(li.innerText);
+    } else {
+      setQuery('');
+    }
+  };
+
   return (
     <div className="App">
       <header className="header">
@@ -38,6 +49,46 @@ const App = () => {
         <form onSubmit={getSearch} className="search-form">
           <SearchBox updateSearch={updateSearch} placeholder="Search recipe" />
         </form>
+        <div className="search-filter">
+          <ul className="filters">
+            <li className="filter" onClick={activateSearchFilter}>
+              Chicken
+            </li>
+            <li className="filter" onClick={activateSearchFilter}>
+              Sushi
+            </li>
+            <li className="filter" onClick={activateSearchFilter}>
+              Bread
+            </li>
+            <li className="filter" onClick={activateSearchFilter}>
+              Risotto
+            </li>
+            <li className="filter" onClick={activateSearchFilter}>
+              Pasta
+            </li>
+            <li className="filter" onClick={activateSearchFilter}>
+              Soup
+            </li>
+            <li className="filter" onClick={activateSearchFilter}>
+              Dessert
+            </li>
+            <li className="filter" onClick={activateSearchFilter}>
+              Salad
+            </li>
+            <li className="filter" onClick={activateSearchFilter}>
+              Eggs
+            </li>
+            <li className="filter" onClick={activateSearchFilter}>
+              Pizza
+            </li>
+            <li className="filter" onClick={activateSearchFilter}>
+              Fish
+            </li>
+            <li className="filter" onClick={activateSearchFilter}>
+              Grill
+            </li>
+          </ul>
+        </div>
       </header>
       <div className="recipes">
         {recipes.map((recipe, index) => (

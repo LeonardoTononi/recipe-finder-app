@@ -8,6 +8,7 @@ export const Recipe = ({ title, calories, image, ingredients }) => (
       <img className="image" src={image} alt="" />
     </div>
     <p className="calories">Calories: {parseInt(calories)} Kcal</p>
+    <h2>Ingredients:</h2>
     <ul className="ingredients">
       {ingredients.map((ingredient, index) => (
         <li className="ingredient" key={index}>
